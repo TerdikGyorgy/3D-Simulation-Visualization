@@ -10,3 +10,8 @@ the densities for alternate specifications of degree and order [see Density_SphH
 
 Further aspects of the package that distinguish it from others are the plots themselves.  When we were looking for appropriate graphical representations of the simulated data from these distributions, we could not find anything that met our specific needs, so we developed our own.  Contrary to the common 3-dimensional heatmap style plots (which are useful, but not what we felt would give the best representation of the data in this particular instance), 3D-SSV plots the 3-dimensional spherical density plots topographically on the surface of the unit sphere, where the values are given by the mathematical formulation of the density function for a given set of parameter values (all of the 'Density_XXXXX.m' functions will plot the respective density). In addition,
 we developed a method to render histograms on the surface of the unit sphere for data points [see Plot_Hist2DSphere.m], regardless of whether that data is simulated from the aforementioned densities or collected via alternate methods.  This last contribution may be particularly useful to users who wish to visualize 3-dimensional directional data in a way that is intuitive, and up to this point, largely underutilized (with respect to Matlab implementation).
+Copyright 2018 Gy.Terdik
+gyorgy.terdik@gmail.com
+ 
+
+
