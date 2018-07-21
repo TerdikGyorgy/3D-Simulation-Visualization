@@ -133,5 +133,6 @@
 % Authors: Gy.Terdik, B.Wainwright
 %
 % Copyright 2018 Gy.Terdik
+% gyorgy.terdik@gmail.com
 
 
