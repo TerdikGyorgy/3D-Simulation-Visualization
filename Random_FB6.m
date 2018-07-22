@@ -15,10 +15,10 @@ function Y = Random_FB6(kappa,bet,gamm,varargin)
 % Mu=[0 0 1];% Mu=[1 -1 1] ;%  Mu=[0 -1 1]; 
 %
 % Examples of correct function construction: 
-% Y = Random_FB6(kappa,bet,gamm,Mu,Psi,n)
-% Y = Random_FB6(kappa,bet,gamm,Mu,Psi)
-% Y = Random_FB6(kappa,bet,gamm,Mu)
-% Y = Random_FB6(kappa,bet,gamm)
+% Y = Random_FB6(kappa,bet,gamm,Mu,Psi,n);
+% Y = Random_FB6(kappa,bet,gamm,Mu,Psi);
+% Y = Random_FB6(kappa,bet,gamm,Mu);
+% Y = Random_FB6(kappa,bet,gamm);
 %%
 %
 % Required Inputs

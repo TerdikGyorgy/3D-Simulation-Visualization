@@ -51,7 +51,7 @@ if gamm < 0 % if gamma<0, then FB4 is a truncated normal
         X=[];  
         a2 = exp(gamm)*cFB4(kappa,gamm)/cFB4(kappa+2*gamm,0); % acceptance ratio
         while length(X)< n
-            x2 = vMF_Wood(kappa+2*gamm,3,ceil(n/a2));
+            x2 = vMF_Wood(kappa+2*gamm,ceil(n/a2),3);
             x_U= rand(ceil(n/a2),1);
             x2 = x2(x_U<=exp(gamm)*exp(-2*gamm*x2+gamm*x2.^2));
             X  = [X;x2 ] ;
@@ -62,8 +62,8 @@ elseif gamm > 0 % corresponds to a positive quadratic term
     a3= p1*(1+exp(-2*gamm))*cFB4(kappa,gamm)/cFB4(kappa+gamm,0); % acceptance ratio
     X=[];
     while length(X) < n
-        x3_minus  = vMF_Wood(kappa-gamm,3,ceil(n/a3)); % marginal vMF distribution
-        x3_plus  = vMF_Wood(kappa+gamm,3,ceil(n/a3)); % marginal vMF distribution
+        x3_minus  = vMF_Wood(kappa-gamm,ceil(n/a3),3); % marginal vMF distribution
+        x3_plus  = vMF_Wood(kappa+gamm,ceil(n/a3),3); % marginal vMF distribution
         x3_U = rand(length(x3_plus),1);
         x3_mix = x3_plus .* (x3_U <= p1)+x3_minus .* (1-(x3_U <= p1));
         %mix corresponds to the mixed density 
