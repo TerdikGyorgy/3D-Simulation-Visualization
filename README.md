@@ -12,6 +12,8 @@ Further aspects of the package that distinguish it from others are the plots the
 we developed a method to render histograms on the surface of the unit sphere for data points [see Plot_Hist2DSphere.m], regardless of whether that data is simulated from the aforementioned densities or collected via alternate methods.  This last contribution may be particularly useful to users who wish to visualize 3-dimensional directional data in a way that is intuitive, and up to this point, largely underutilized (with respect to Matlab implementation).
 Copyright 2018 Gy.Terdik
 gyorgy.terdik@gmail.com
- 
+ See Project: Harmonic Analysis of Spherical distributions by 
+ https://www.researchgate.net/project/Harmonic-Analysis-of-Spherical-distributions
+
 
 

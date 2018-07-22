@@ -1,3 +1,5 @@
+% See Project: Harmonic Analysis of Spherical distributions by 
+%%  https://www.researchgate.net/project/Harmonic-Analysis-of-Spherical-distributions
 %% Product Overview
 % 3D-Directional Statistics, Simulation and Visualization (3D-SSV) is a
 % fast, accurate, and convenient way to calculate, simulate, and visualize
