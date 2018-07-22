@@ -32,18 +32,6 @@ function X=FB4(kappa,gamm,n)
 % by Andrew T.A. Wood (1987)
 % Communications in Statistics - Simulation and Computation, 16:3, 885-898,
 % DOI: 10.1080/03610918708812624
-%% 
-if kappa==0 && gamm==0;
-    U = rand(n,1);
-    X = 2*U-1; % cos(theta)
-    return
-elseif kappa==0;
-    X= Watson_LW(gamm,n); % Watson !!!!!!!! which one??
-    return
-else gamm==0;
-    X=vMF_Wood(kappa,n,3);% when gamma==0 FB4 is the von Mises-Fisher distribution
-    return
-end
 
 %% 
 

@@ -86,10 +86,12 @@ X = [];
 if kappa==0 && bet==0
     Y=Random_Uni_Norm(n);
     return
-elseif  bet==0
+end 
+if  bet==0
     Y = Random_vMF_Wood(kappa,Mu,n);
     return
-else kappa==0 
+end 
+if  kappa==0 
    Y = Random_FB4_Beta_GyT(bet,Mu,Psi,n);
     return
 end 

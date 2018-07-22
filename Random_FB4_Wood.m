@@ -74,15 +74,20 @@ end
 %%
 % cFB = integral(@(u)(exp(kappa*u+gamm*u.^2)),-1,1); % normalizing constant
 % p2 = 1/2; % mixing proportion
-a4 = 1; % acceptance ratio
+%a4 = 1; % acceptance ratio
 sign_kappa = sign(kappa)+(kappa==0);
 kappa = abs(kappa); % kappa should be non-negative
 
 %%
-if gamm==0; 
+if kappa==0 && gamm==0;
+    U = rand(n,1);
+    X = 2*U-1; % cos(theta)
+   Y = Random_Uni_Norm(n);
+   return
+elseif gamm==0; 
    Y = Random_vMF_Wood(kappa,Mu,n);
    return % when gamma==0 FB4 is the von Mises-Fisher distribution
-elseif kapa==0 
+elseif kappa==0 
     Y = Random_Watsom_Fish(gamm,Mu,n);
     return
 else

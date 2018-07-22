@@ -87,16 +87,20 @@ end
 if kappa==0 && bet==0 && gamm==0
     Y=Random_Uni_Norm(n);
     return
-elseif kappa==0 && gamm==0
+end 
+if kappa==0 && gamm==0
     Y = Random_FB4_Beta_GyT(bet,Mu,Psi,n);
     return
-elseif  kappa==0 && bet==0
+end 
+if  kappa==0 && bet==0
     Y = Random_Watsom_Fish(gamm,Mu,n);
     return
-elseif  gamm==0
+end 
+if  gamm==0
     Y = Random_FB5_GyT(kappa,bet,Mu,Psi,n);
     return
-else  bet==0
+end 
+if  bet==0
     Y = Random_FB4(kappa,gamm,Mu,n);
     return
 end

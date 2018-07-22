@@ -33,7 +33,20 @@ function W2=FB4_Wood(kappa,gamm,n)
 % DOI: 10.1080/03610918708812624
 % Wood page 888
 %%
-
+if kappa==0 && gamm==0;
+    U = rand(n,1);
+    X = 2*U-1; % cos(theta)
+    return
+end 
+if kappa==0 && gamm~=0;
+    X= Watson_LW(gamm,n); % Watson !!!!!!!! which one??
+    return
+end 
+if gamm==0  && kappa ~=0;
+    X=vMF_Wood(kappa,n,3);% when gamma==0 FB4 is the von Mises-Fisher distribution
+    return
+end
+%% 
 cFB4= @(kappa4,gamm)(integral(@(u)(exp(kappa4*u+gamm*u.^2)),-1,1)); % normalizing constant
 W2=[];
 %%

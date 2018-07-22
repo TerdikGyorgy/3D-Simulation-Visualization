@@ -74,7 +74,7 @@ if isempty(d)
     d = 3;
 end
 
-%% density
+%% 
 % d=3;   dim of the space / m=3 corresponds to the unit sphere
 
 if kappa==0;

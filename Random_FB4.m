@@ -77,10 +77,21 @@ sign_kappa=sign(kappa)+(kappa==0);
 kappa=abs(kappa); % kappa should be non-negative
 
 %%
+if kappa==0 && gamm==0;
+    U = rand(n,1);
+    X = 2*U-1; % cos(theta)
+   
+elseif kappa==0 && gamm~=0;
+    X= Watson_LW(gamm,n); % Watson !!!!!!!! which one??
+    
+elseif gamm==0  && kappa ~=0;
+    X=vMF_Wood(kappa,n,3);% when gamma==0 FB4 is the von Mises-Fisher distribution
+    
+else
 
    X = FB4(kappa,gamm,n); % marginal FB4 distribution ceil(n/a4)
 
-
+end
 %% psi iid uniform
 psi = 2*pi*rand(length(X),1);
 Xs = sqrt(1-X.^2); 
